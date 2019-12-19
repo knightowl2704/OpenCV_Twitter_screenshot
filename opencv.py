@@ -1,7 +1,7 @@
 import cv2
 import numpy as np
 import matplotlib.pyplot as plt
-image = cv2.imread('train/01.png')
+image = cv2.imread('Twitter_OpenCV_segmentation/train/01.png')
 # cv2.imshow("image",image)
 hsv = cv2.cvtColor(image,cv2.COLOR_BGR2HSV)
 
