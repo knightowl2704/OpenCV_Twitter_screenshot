@@ -6,7 +6,7 @@
 
 **Task**
 <br>
-The task was to create bounding boxes around the 'following' buttons given in the screenshots from twitter.
+The task was to create bounding boxes around the 'following' buttons given in the screenshots from twitter and obtain their coordinates.
 
 **Approach**
 
