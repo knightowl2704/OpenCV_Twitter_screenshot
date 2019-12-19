@@ -37,3 +37,8 @@ Now we draw a bounding rectangle around the obtained contours and obtain their c
 
 ![FinalImage](https://github.com/knightowl2704/OpenCV_Twitter_screenshot/blob/master/assets/Screenshot%20(47).png)
 
+
+**Coordinates:**
+
+![FinalImage](https://github.com/knightowl2704/OpenCV_Twitter_screenshot/blob/master/assets/Screenshot%20(50).png)
+
