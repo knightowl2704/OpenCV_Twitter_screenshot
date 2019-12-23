@@ -15,6 +15,17 @@ One way to deal with this was using pre trained models and training them on the 
 
 My approach is basically creating a **colour filter**, since all the buttons are of same colour, with an upper threshold and a lower threshold of the button colour. Getting the correct values is little difficult, but after some hit and trial these can be tweaked easily.
 
+For example, let the original colour of the following button in RGB is (24,83,121):
+
+```
+>>> orig_color = np.uint8([[[121,83,24]]]) # Should be in BGR sequence
+>>> hsv_orig_color = cv2.cvtColor(orig_color,cv2.COLOR_BGR2HSV)
+>>> print(hsv_orig_color)
+[[[101,224,241]]]
+```
+Set the range as lower = [H-10,100,100] and upper = [H+10,255,255] where H = 101 for this example.
+
+
 This can be masked with the original image, resulting into an image just with the required colours.
 
 This however includes whatever is in the blue color range. Basically the text which is blue colour or some profile pictures that have blue colour in them are also included. 
