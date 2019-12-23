@@ -7,9 +7,13 @@ image = cv2.imread('Twitter_OpenCV_segmentation/test/01a.png')
 hsv = cv2.cvtColor(image, cv2.COLOR_BGR2HSV)
 
 # COLOR FILTERING
+# Original following button coordinates RGB : 24,83,121
+# hsv_for these : [101,224,241]
+#Define range lower = [H - 10,100,100]
+# upper = [H + 10,255,255]
 
-lower = np.array([100, 100, 70])
-upper = np.array([130, 255, 255])
+lower = np.array([90, 100, 100])
+upper = np.array([111,255,255])
 # MASKING
 mask = cv2.inRange(hsv, lower, upper)
 res = cv2.bitwise_and(image, image, mask=mask)
@@ -17,6 +21,7 @@ res = cv2.bitwise_and(image, image, mask=mask)
 cv2.imshow('image', image)
 cv2.imshow('mask', mask)
 cv2.imshow('res', res)
+cv2.imwrite('result.png', res)
 resgray = cv2.cvtColor(res, cv2.COLOR_RGB2GRAY)
 
 # CONTOURS
@@ -45,5 +50,6 @@ for i in contours1:
 
 cv2.imshow("resgray", resgray)
 cv2.imshow("final", image)  # FINAL IMAGE
+cv2.imwrite('final.png',image)
 
 # COORDINATES are printed below
