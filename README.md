@@ -13,7 +13,7 @@ The task was to create bounding boxes around the 'following' buttons given in th
 One way to deal with this was using pre trained models and training them on the custom dataset. But even though this is a robust method, I feel that this task can be easily implemented by using **OpenCV** and the contour functions in OpenCV. And I believe in simplicity :)
 <br>
 
-My approach is basically creating a **colour filter**, since all the buttons are of same colour, with an upper threshold and a lower threshold of the button colour. Getting the correct values is little difficult, but after some hit and trial these can be tweaked easily.
+My approach is involves creating a **colour filter** on the image, since all the buttons are of same colour, with an upper threshold and a lower threshold of the button colour. Getting the correct values is little difficult, but after some hit and trial these can be tweaked easily.
 
 For example, let the original colour of the following button in RGB is (24,83,121):
 
